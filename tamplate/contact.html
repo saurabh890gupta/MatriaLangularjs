@@ -1,0 +1,75 @@
+<md-content>
+ <div layout="row">
+  <div flex=100% layout="center center"> 
+    <div class="contact-us" id="contact1">  
+      <div layout="row"  >
+        <div flex="30"  >
+          <h3> <b><i class="material-icons">room</i></b> Address</h3>
+          <p>H/55 sector-63
+          <br/>Noida
+          <br/>UP 
+          <br/>
+          <strong>Inida</strong>
+          </p>
+        </div>
+        <div flex="35" >
+          <h3><i class="material-icons">
+              settings_phone
+              </i> <span>Web Dovelopment</span></h3>
+          <p class="text-muted">This number is toll free if calling from
+            Great Britain otherwise we advise you to use the electronic
+            form of communication.</p>
+          <p><strong>+91 7398894383</strong></p>
+        </div>
+        <div flex="35">
+          <h3><i class="material-icons">email</i><span>Electronic support</span></h3>
+          <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
+          <ul>
+            <li><strong><a href="/">shipgig venture.com</a></strong>   </li>
+            <li><strong><a href="/">Noida</a></strong> - our ticketing support platform</li>
+          </ul>
+        </div>
+      </div>
+    </div>    
+  </div>
+</div>
+</md-content>
+<md-content>
+<md-button type="button" ng-click="ShowHide()">click for contact</md-button> 
+<form  ng-show = "IsVisible">
+    <h3>Contact Form:</h3>
+<div layout="row" >
+  <div flex="50">
+        <md-input-container class="md-block">
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter Name" name="name" ng-model="obj.name" required /> 
+        </md-input-container>
+        <md-input-container class="md-block">
+                <label for="contact"><b>contact no</b></label>
+                <input type="text" placeholder="contact....." name="contact" ng-model="obj.contact" required />
+        </md-input-container>
+  </div>
+  <div flex="50">
+        <md-input-container class="md-block">
+                <label for="email"><b>email</b></label>
+                <input type="text" placeholder="email" name="email" ng-model="obj.email" required />
+        </md-input-container>
+        <md-input-container class="md-block">
+          <label for="Address"><b>Address</b></label>
+          <input type="text" placeholder="Address" name="address" ng-model="obj.addr" required />
+        </md-input-container>
+  </div>
+</div>
+<md-input-container class="md-block">
+    <label for="Query"><b>Query:</b></label>
+    <textarea name="=Ouery"  class="form-control"  placeholder="Somthing Write...."   ng-model="obk.propertydescreption" > </textarea>
+</md-input-container>        
+    <div layout="row" layout-align="end end">
+      <input type='submit' class='btn btn-next btn-primary' id="finish" name='finish' value='send' /> 
+    </div>
+   
+   
+</form>
+</md-content>
+<div ng-include="'/tamplate/footer.html'">
+</div>

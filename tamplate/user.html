@@ -1,0 +1,189 @@
+<div id="table-list" class="page-layout carded fullwidth" layout="row">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg md-accent-bg"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center" layout="column" flex>
+
+
+
+        <!-- HEADER -->
+        <div class="header" layout="row" layout-align="space-between center">
+            <div class="white-fg" layout="row" layout-align="start center" flex>
+                <!-- <md-button class="goto-products-button md-icon-button" aria-label="Go to products"
+                           ng-click="vm.gotoProducts()"
+                           translate translate-attr-aria-label="EC.GO_TO_PRODUCTS">
+                    <md-icon md-font-icon="icon-arrow-left"></md-icon>
+                </md-button> -->
+
+                <div layout="row" layout-align="start center">
+                    <!--<div class="thumbnail-image" hide-xs>
+                        <img ng-src="{{vm.product.images[0].url}}">
+                    </div>-->
+
+                    <div layout="column" layout-align="start start">
+                        <div class="h2">
+                            USERS
+                        </div>
+                        <div class="subtitle secondary-text">
+                            <span>Total Users : {{vm.users.length}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search" layout="row" layout-align="center stretch" flex>
+                    <md-icon md-font-icon="icon-magnify" class="white-text icon search-icon"></md-icon>
+                    <input id="e-commerce-products-search" class="search-input" type="text" placeholder="Search"
+                           translate translate-attr-placeholder="USERS.SEARCH" flex>
+            </div>
+
+            <div flex>
+                &nbsp;
+            </div>
+        </div>
+        <!-- / HEADER -->
+
+
+        <!-- CONTENT CARD -->
+        <div class="content-card" layout="column" flex>
+
+            <!-- CONTENT TOOLBAR -->
+
+            <!-- / CONTENT TOOLBAR -->
+
+            <!-- CONTENT -->
+            <div class="content fullpage-datatable" layout="column" flex>
+
+                <table class="dataTable row-border hover" datatable="ng" dt-instance="vm.dtInstance"
+                       dt-options="vm.dtOptions">
+                    <thead>
+                    <tr>
+                        <th class="secondary-text">
+                            <div class="table-header">
+                                <span class="column-title">ID</span>
+                            </div>
+                        </th>
+
+                        <th class="secondary-text">
+                            <div class="table-header">
+                                <span class="column-title">Username</span>
+                            </div>
+                        </th>
+                        <th class="secondary-text">
+                            <div class="table-header">
+                                <span class="column-title">Phone Number</span>
+                            </div>
+                        </th>
+                        <th class="secondary-text">
+                            <div class="table-header">
+                                <span class="column-title">Email</span>
+                            </div>
+                        </th>
+                        <th class="secondary-text">
+                                <div class="table-header">
+                                    <span class="column-title">Refer Code</span>
+                                </div>
+                            </th>
+                            <th class="secondary-text">
+                                    <div class="table-header">
+                                        <span class="column-title">Points</span>
+                                    </div>
+                                </th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <span ng-repeat="user in ::vm.users track by user.id"  >
+                    <tr  ng-click="vm.showMenu($index)">
+                        <td>{{user.id}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.refCode}}</td>
+                        <td>{{user.points||0}}</td>
+                        <!-- <td>
+                                <md-button class="edit-button md-icon-button" aria-label="Order details" ng-click="showOptions=!showOptions">
+                                    <md-icon md-font-icon="icon-dots-horizontal" class="s16" style="position:relative"></md-icon>
+                                </md-button>
+                                <div ng-If="showOptions" style="z-index:10;position:absolute; background-color: lightgray;cursor: pointer;">
+                                    <p ng-click="getUserDetails()">Details</p>
+                                    <p>Update</p>
+                                    <p>Delete</p>
+                                </div>
+                        </td> -->
+                      
+
+
+
+                    </tr>
+                    <tr  ng-show="$index == vm.currentIndex">
+                            <table class="dataTable row-border hover" datatable="ng" dt-instance="vm.dtInstance"
+                            dt-options="vm.dtOptions">
+                         <thead>
+                         <tr>
+                             <th class="secondary-text">
+                                 <div class="table-header">
+                                     <span class="column-title">ID</span>
+                                 </div>
+                             </th>
+     
+                             <th class="secondary-text">
+                                 <div class="table-header">
+                                     <span class="column-title">Username</span>
+                                 </div>
+                             </th>
+                             <th class="secondary-text">
+                                 <div class="table-header">
+                                     <span class="column-title">Phone Number</span>
+                                 </div>
+                             </th>
+                             <th class="secondary-text">
+                                 <div class="table-header">
+                                     <span class="column-title">Email</span>
+                                 </div>
+                             </th>
+                             <th class="secondary-text">
+                                     <div class="table-header">
+                                         <span class="column-title">Refer Code</span>
+                                     </div>
+                                 </th>
+                                 <th class="secondary-text">
+                                         <div class="table-header">
+                                             <span class="column-title">Points</span>
+                                         </div>
+                                     </th>
+     
+                         </tr>
+                         </thead>
+                         <tbody>
+                             </tbody>
+                             </table>
+
+
+
+
+                    </tr>
+                </span>
+                    </tbody>
+                </table>
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+
+</div>
+
+
+
+
+vm.showMenu=function(index){
+    vm.currentIndex= index;
+ }

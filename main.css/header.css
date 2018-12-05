@@ -1,0 +1,38 @@
+
+.headertollbar{
+    border: 1px solid black;
+}
+.loginbtn{
+    border:1px solid#f1f1f1;
+    color:white;
+    padding: 9px;
+    background-color:#ffb84d;
+    border-radius: 5px;
+}
+.signinbtn{
+    border:1px solid#f1f1f1;
+    color:white;
+    padding: 9px;
+    background-color:#cc9900;
+    border-radius: 5px;
+}
+.header{
+    background-color: antiquewhite;
+}
+
+md-tab {
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+    padding: 12px 24px;
+    transition: background-color .35s cubic-bezier(.35,0,.25,1);
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    text-transform: uppercase;
+    float: left;
+    font-weight: 500;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

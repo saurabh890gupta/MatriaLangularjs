@@ -1,0 +1,251 @@
+<md-content>
+<div class="about">
+   
+       
+                <form  style="border:2px solid grey" >
+                       
+                        <h3 style="text-align:center">
+                                <b>Submit</b> YOUR PROPERTY <br/>
+                                <small>According to own way</small>
+                            </h3>
+                            
+
+      <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <h4 style="text-align:center">Submit form</h4>
+          <md-tab class="tabingsys" label="Step-1">
+            <md-content class="md-padding">
+                <div layout="row" >
+                    <div flex="40" >
+                        <div class="picture">
+                            <input type="file" name="file-to-upload" fileput="file" id= "fimage" filepreview="filepreview" filename="filename" ng-model="fileput"/>
+                            <img ng-src="{{filepreview}}" class="img-responsive" ng-show="filepreview" />
+                        </div>
+                    </div>
+                  
+                    <div flex="60">
+                       <md-input-container class="md-block">
+                          <label>Property name <small>(required)</small></label>
+                          <input name="propertyname" type="text" class="form-control" placeholder="Super villa ..." ng-model="obk.propertyname" />
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                          <label>Property price <small>(required)</small></label>
+                          <input name="propertyprice" type="text" className="form-control" ref="propertyprice" id="propertyprice" placeholder="3330000" ng-model="obk.propertyprice" >
+                        </md-input-container>
+                     
+                        <md-input-container class="md-block">
+                          <label>Telephone <small>(empty if you wanna use default phone number)</small></label>
+                          <input name="phone" type="text" class="form-control" id="phone" min="10" maxLength="10" ref="phone"  placeholder="+632-221-2221" ng-model="obk.phone" >
+                        </md-input-container>
+
+                      <!-- <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p> -->
+                    </div>
+                </div>
+
+            </md-content>
+          </md-tab>
+          <md-tab label="Step-2">
+            <md-content class="md-padding">
+              <div layout="row">
+                <div flex>
+                  <div class="form-group">
+                    <label>Property Description :</label>
+                    <textarea name="propertydescreption"  class="form-control"  id="propertydescreption" ref="propertydescreption" style="width:700px; height: 100px; " ng-model="obk.propertydescreption" > </textarea>
+                  </div> 
+                </div>
+              </div>
+              <div layout="row">
+                <div flex="25%">
+                    <div class="form-group">
+                        <label>Property State :</label>
+                      
+                            
+                            <md-select ng-model="state" placeholder="state" class="md-underline">
+                                    <md-option value="Utter Pradesh">Utter Pradesh</md-option>
+                                    <md-option value="Delhi">Delhi</md-option>
+
+                        </md-select>
+                    </div>
+                </div>
+                <div flex="25%">
+                    <div class="form-group">
+                        <label>Property City :</label>
+                        
+                        <md-select ng-model="city" placeholder="city" class="md-underline">
+                                <md-option value="Noida">Noida</md-option>
+                                <md-option value="Ghaziabad">Ghaziabad</md-option>
+                                <md-option value="Greater Noida">Greater Noida</md-option>
+                                <md-option value="Delhi Local">Delhi Local</md-option>
+                        </md-select>
+                    </div>
+                </div>
+                <div flex="25%">
+                    <div class="form-group">
+                        <label>Property Statue  :</label>
+                       
+                          <md-select ng-model="statue" placeholder="statue" class="md-underline">
+                                <md-option value="Rent">Rent</md-option>
+                                <md-option value="Buy">Buy</md-option>
+                        </md-select>
+
+
+                    </div>
+                </div>
+                <div flex="25%">
+                    <div class="form-group">
+                        <label>Lease Perioud :</label>
+                       
+                        <md-select ng-model="lease_perioud" placeholder="lease_perioud" class="md-underline">
+                                <md-option value="1 year">1 year</md-option>
+                                <md-option value="2 year">2 year</md-option>
+                                <md-option value="3 year">3 year</md-option>
+                        </md-select>
+
+
+                    </div>
+                </div>
+              </div>
+                <div layout="row">
+                  <div flex=50%>
+                        <md-input-container class="md-block">
+                          <label >Min bed :</label>
+                          <input type="text"  ng-model="obk.propertyminbed" />
+                        </md-input-container>
+                  </div>
+                          
+                  <div flex=50%>
+                        <md-input-container class="md-block">
+                          <label >Property Area  :</label>
+                          <input type="text"  ng-model="obk.propertyarea"/>
+                        </md-input-container>
+                  </div> 
+                </div>
+              <div layout="row">
+                  <div flex=25%>
+                      
+                          
+                          <md-checkbox >
+                               SwimmingPool
+                               </md-checkbox>
+                      
+                  </div> 
+                  <div  flex=25%>
+                     
+                      <md-checkbox >
+                            2 Stories
+                            </md-checkbox>
+                  </div>                                                 
+                  <div  flex=25%>
+                      
+                      <md-checkbox >
+                            Emergency Exit
+                            </md-checkbox>
+                  </div>                                                 
+                  <div flex=25%>
+                      
+                      <md-checkbox >
+                            Fire Place
+                            </md-checkbox>
+                  </div>
+              </div>
+              <div layout="row">
+                  <div flex=25%>
+                      
+                      <md-checkbox >
+                            Laundry Room
+                            </md-checkbox>
+                  </div>
+                  <div flex=25%>
+                      
+                      <md-checkbox >
+                            Jog Path
+                            </md-checkbox>
+                  </div>
+                  <div flex=25%>
+                      
+                      <md-checkbox >
+                            Ceilings
+                            </md-checkbox>
+                  </div>
+                  <div flex=25%>
+                      
+                      <md-checkbox >
+                            Dual Sinks
+                            </md-checkbox>
+                  </div>
+              </div>
+
+
+
+               
+            </md-content>
+          </md-tab>
+          <md-tab label="Step-3">
+            <md-content class="md-padding">
+              
+                <div layout="row">
+                    <div flex=30%>
+                            <div class="picture">
+                                    <input type="file" name="file-to-upload" fileput="file" id= "fimage" filepreview="filepreview" filename="filename" ng-model="fileput"/>
+                                    <img ng-src="{{filepreview}}" class="img-responsive" ng-show="filepreview" /> 
+                            </div>
+                            
+                    </div>  
+                    <div flex=70%>
+                        <md-input-container class="md-block">
+                            <label><strong>Property video :</strong></label>
+                            <input type="text" class="form-control" placeholder="http:www.youtube.com, http:vimeo.com" ng-model="obk.propertyVideo1"/>
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <input type="text" class="form-control" placeholder="http:www.youtube.com, http:vimeo.com" ng-model="obk.propertyVideo2"/>
+                        </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <input type="text" class="form-control" placeholder="http:www.youtube.com, http:vimeo.com" ng-model="obk.propertyVideo3"/>
+                        </md-input-container>
+                    </div>   
+                </div>
+              
+            </md-content>
+          </md-tab>
+          <md-tab label="Step-4">
+              <md-content class="md-padding">
+                    <h2 style="text-align:center">Finished and submit </h2>
+                    <div layout="row">  
+                        <div flex>
+                            <div class="">
+                                <p>
+                                    <label><strong>Terms and Conditions</strong></label>
+                                    By accessing or using  GARO ESTATE services, such as 
+                                    posting your property advertisement with your personal 
+                                    information on our website you agree to the
+                                    collection, use and disclosure of your personal information 
+                                    in the legal proper manner
+                                </p>
+
+                                 
+                                <md-checkbox >
+                                        <strong>Accept termes and conditions.</strong>
+                                </md-checkbox>
+                                <div class="space"></div>
+                                
+                                <div layout="row" layout-align="end end">
+                                    <md-button class="md-primary md-raised" >Submit</md-button >
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                
+              </md-content>
+            </md-tab>
+        </md-tabs>
+      </md-content>
+  </form>
+  </div>
+ 
+</md-content>
+<div ng-include="'/tamplate/footer.html'">
+</div>

@@ -1,0 +1,32 @@
+<md-content>
+<div layout="row">
+    <div flex="100">
+        <div class="flex login-blocks">
+                <h2>Login : </h2> 
+                <form  >
+                <md-input-container class="md-block">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="email"  name="username"  required />
+                </md-input-container>
+                <md-input-container class="md-block">
+                    <label>Password</label>
+                    <input type="password" class="form-control" id="password" name="password"  required />
+                </md-input-container>
+                <div layout="row" layout-align="center center">
+                    <button type="submit" class="btn " > Log in</button>
+                    
+                </div>
+            </form>
+    
+        
+                <h2>Social login :  </h2> 
+                <p>
+                <a className="login-social" to="www.Facebook.com"><i className="fa fa-facebook"></i>&nbsp;Facebook</a> 
+                </p> 
+            </div>
+        
+    </div>  
+</div>
+</md-content>
+<div ng-include="'/tamplate/footer.html'">
+</div>
